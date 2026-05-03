@@ -2,6 +2,8 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.21.
 
+Site one-page para atender clínicas de saúde e bem-estar para serviços de MKT Dogital e desenvolvimento web. 
+
 ## Development server
 
 To start a local development server, run:
