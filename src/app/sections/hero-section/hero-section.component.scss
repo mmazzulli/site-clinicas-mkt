@@ -27,15 +27,27 @@
   font-weight: 600;
 }
 
+/* 👇 AQUI ESTÁ A CORREÇÃO PRINCIPAL */
 .hero__title {
   font-size: 3rem;
   line-height: 1.1;
   color: #1f2937;
   font-weight: 700;
+
   opacity: 1;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(0);
+
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.hero__title.fade-out {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.hero__title-wrapper {
+  min-height: 160px;
+}
 
 .hero__seo-title {
   font-size: 1.1rem;
@@ -95,37 +107,10 @@
   .hero__title {
     font-size: 2.2rem;
   }
-
 }
-
 
 .hero__title-wrapper {
   min-height: 140px;
   display: flex;
   align-items: center;
-}
-
-.fade-text {
-  animation: fadeLoop 4s infinite;
-}
-
-@keyframes fadeLoop {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  10% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
 }

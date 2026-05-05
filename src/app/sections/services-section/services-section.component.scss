@@ -1,0 +1,90 @@
+@use '../../../styles/abstracts/variables' as *;
+
+.services-section {
+  padding: 8rem 0;
+  background-color: $white;
+}
+
+/* HEADER */
+.services-header {
+  max-width: 720px;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.services-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $primary-color;
+}
+
+.services-header h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: $text-dark;
+}
+
+.services-header p {
+  color: $text-light;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* CARD */
+.service-card {
+  padding: 2.5rem;
+  border-radius: $border-radius;
+  background-color: $background-light;
+  transition: $transition-default;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ICON */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  background-color: rgba(47, 107, 98, 0.08);
+}
+
+/* TEXT */
+.service-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: $text-dark;
+}
+
+.service-card p {
+  color: $text-light;
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 5rem 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

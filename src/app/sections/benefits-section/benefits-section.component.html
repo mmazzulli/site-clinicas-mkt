@@ -1,1 +1,42 @@
-<p>benefits-section works!</p>
+<section class="benefits-section">
+  <div class="container benefits-wrapper">
+
+    <!-- IMAGE -->
+    <div class="benefits-image">
+      <img 
+        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f"
+        alt="Ambiente de saúde e bem-estar"
+      />
+    </div>
+
+    <!-- CONTENT -->
+    <div class="benefits-content">
+
+      <span class="benefits-badge">
+        resultados
+      </span>
+
+      <h2>
+        Uma presença digital que trabalha a seu favor todos os dias
+      </h2>
+
+      <p class="benefits-description">
+        Mais do que estar online, trata-se de transmitir confiança, clareza e profissionalismo em cada ponto de contacto com seus pacientes.
+      </p>
+
+      <div class="benefits-list">
+
+        <div 
+          class="benefit-item"
+          *ngFor="let item of benefits"
+        >
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

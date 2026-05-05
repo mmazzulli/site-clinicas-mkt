@@ -1,1 +1,19 @@
-<p>niches-section works!</p>
+<section class="niches-section">
+  <div class="container">
+
+    <div class="niches-header">
+      <p>especialidades atendidas</p>
+    </div>
+
+    <div class="niches-wrapper">
+
+      <div class="niche-item"
+           *ngFor="let item of groups[currentIndex]"
+           [class.alt]="isAltColor">
+        {{ item }}
+      </div>
+
+    </div>
+
+  </div>
+</section>

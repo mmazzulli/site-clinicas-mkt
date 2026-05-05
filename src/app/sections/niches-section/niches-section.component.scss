@@ -1,0 +1,61 @@
+@use '../../../styles/abstracts/variables' as *;
+
+.niches-section {
+  padding: 3rem 0;
+  background-color:rgb(210, 210, 210)
+}
+
+/* HEADER */
+.niches-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  p {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $text-light;
+  }
+}
+
+/* WRAPPER */
+.niches-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  min-height: 40px;
+}
+
+/* ITEM */
+.niche-item {
+  font-size: 1rem;
+  color: $text-dark;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+/* COLOR ALTERNATE */
+.niche-item.alt {
+  color: $primary-color;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .niches-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

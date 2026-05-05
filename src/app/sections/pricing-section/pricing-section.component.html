@@ -1,1 +1,64 @@
-<p>pricing-section works!</p>
+<section class="pricing-section">
+  <div class="container">
+
+    <div class="pricing-header">
+      <span class="pricing-badge">planos</span>
+
+      <h2>
+        Escolha o caminho ideal para a sua presença digital
+      </h2>
+
+      <p>
+        Soluções pensadas para diferentes momentos da sua jornada profissional.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <article 
+        class="pricing-card"
+        *ngFor="let plan of plans"
+        [class.highlight]="plan.highlight"
+      >
+
+        <h3>{{ plan.name }}</h3>
+
+        <p class="subtitle">
+          {{ plan.subtitle }}
+        </p>
+
+        <ul class="features">
+          <li *ngFor="let feature of plan.features">
+            {{ feature }}
+          </li>
+        </ul>
+
+        <a 
+          class="btn-primary"
+          [href]="plan.whatsapp"
+          target="_blank"
+        >
+          {{ plan.cta }}
+        </a>
+
+      </article>
+
+    </div>
+
+    <!-- PERSONALIZADO -->
+    <div class="pricing-custom">
+      <p>
+        Precisa de algo específico para a sua realidade?
+      </p>
+
+      <a 
+        class="btn-secondary"
+        href="https://wa.me/SEUNUMERO?text=Quero um plano personalizado"
+        target="_blank"
+      >
+        Solicitar plano personalizado
+      </a>
+    </div>
+
+  </div>
+</section>

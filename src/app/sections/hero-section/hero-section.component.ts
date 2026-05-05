@@ -29,16 +29,16 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
   private timeoutId: any;
   private isRunning = false;
 
+  isVisible = true;
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
 
     if (!isPlatformBrowser(this.platformId)) return;
-
-    if (this.isRunning) return; // 🚨 impede duplicação de loop
+    if (this.isRunning) return;
 
     this.isRunning = true;
-
     this.startLoop();
   }
 
@@ -46,13 +46,24 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
 
     this.timeoutId = setTimeout(() => {
 
-      this.index = (this.index + 1) % this.titles.length;
+      // fade out
+      this.isVisible = false;
 
-      this.currentTitle = this.titles[this.index];
+      setTimeout(() => {
 
-      this.startLoop();
+        // troca texto
+        this.index = (this.index + 1) % this.titles.length;
+        this.currentTitle = this.titles[this.index];
 
-    }, 4000);
+        // fade in
+        this.isVisible = true;
+
+        // loop
+        this.startLoop();
+
+      }, 500);
+
+    }, 3000);
   }
 
   ngOnDestroy(): void {
