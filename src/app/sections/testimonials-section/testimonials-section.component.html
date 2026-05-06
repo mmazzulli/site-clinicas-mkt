@@ -1,1 +1,44 @@
-<p>testimonials-section works!</p>
+<section class="testimonials-section">
+  <div class="container testimonials-wrapper">
+
+    <!-- LEFT -->
+    <div class="testimonials-content">
+
+      <span class="testimonials-badge">
+        testemunhos
+      </span>
+
+      <h2>
+        Profissionais que já transformaram a sua presença digital
+      </h2>
+
+      <p>
+        Resultados reais de quem decidiu dar um passo consistente na sua presença online.
+      </p>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="testimonial-card" [class.fade-out]="!isVisible">
+
+      <img 
+        class="testimonial-image"
+        [src]="testimonials[currentIndex].image"
+        alt="Cliente"
+      />
+
+      <p class="testimonial-text">
+        "{{ testimonials[currentIndex].text }}"
+      </p>
+
+      <div class="testimonial-author">
+        <strong>{{ testimonials[currentIndex].name }}</strong>
+        <span>
+          {{ testimonials[currentIndex].role }} — {{ testimonials[currentIndex].location }}
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+</section>

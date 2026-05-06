@@ -1,0 +1,84 @@
+@use '../../../styles/abstracts/variables' as *;
+@use 'sass:color'; 
+
+.cta-section {
+  padding: 7rem 0;
+  background: linear-gradient(
+    135deg,
+    rgba(47, 107, 98, 0.08),
+    rgba(212, 163, 115, 0.08)
+  );
+}
+
+/* WRAPPER */
+.cta-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* CONTENT */
+.cta-content {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* BADGE */
+.cta-badge {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+/* TEXT */
+.cta-content p {
+  color: $text-light;
+}
+
+/* ACTIONS */
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: $primary-color;
+  color: $white;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: $transition-default;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: color.adjust($primary-color, $lightness: -5%);
+  }
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: $transition-default;
+
+  &:hover {
+    background: rgba(0,0,0,0.04);
+    transform: translateY(-2px);
+  }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 5rem 0;
+  }
+}

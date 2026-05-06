@@ -1,1 +1,37 @@
-<p>process-section works!</p>
+<section class="process-section">
+  <div class="container">
+
+    <div class="process-header">
+      <span class="process-badge">como funciona</span>
+
+      <h2>
+        Um processo simples, claro e orientado para resultados
+      </h2>
+
+      <p>
+        Cada etapa é pensada para garantir uma experiência tranquila e alinhada com o seu momento profissional.
+      </p>
+    </div>
+
+    <div class="process-timeline">
+
+      <div 
+        class="process-step"
+        *ngFor="let step of steps; let i = index"
+      >
+
+        <div class="step-marker">
+          <span>{{ i + 1 }}</span>
+        </div>
+
+        <div class="step-content">
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

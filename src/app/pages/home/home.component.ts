@@ -12,7 +12,7 @@ import { BenefitsSectionComponent } from '../../sections/benefits-section/benefi
 import { ProcessSectionComponent } from '../../sections/process-section/process-section.component';
 import { TestimonialsSectionComponent } from '../../sections/testimonials-section/testimonials-section.component';
 import { PricingSectionComponent } from '../../sections/pricing-section/pricing-section.component';
-import { ContactSectionComponent } from '../../sections/contact-section/contact-section.component';
+import { CtaSectionComponent } from '../../sections/cta-section/cta-section.component';
 
 @Component({
   selector: 'app-home',
@@ -28,7 +28,7 @@ import { ContactSectionComponent } from '../../sections/contact-section/contact-
     ProcessSectionComponent,
     TestimonialsSectionComponent,
     PricingSectionComponent,
-    ContactSectionComponent,
+    CtaSectionComponent,
     FooterComponent
   ],
   templateUrl: './home.component.html',
